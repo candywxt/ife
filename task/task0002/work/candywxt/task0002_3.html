@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>task0002_3</title>
+    </head>
+    <style>
+        body,
+        div {
+            margin: 0;
+            padding: 0;
+        }
+        #box {
+            position: relative;
+            overflow: hidden;
+            margin: 10px auto;
+            width: 520px;
+            height: 280px;
+        }
+        #list {
+            position: absolute;
+            overflow: hidden;
+            height: 280px;
+            width: 3640px;
+            z-index: 1;
+        }
+        #list img {
+            float: left;
+        }
+        .arrow {
+            position: absolute;
+            display: none;
+            top: 120px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 39px;
+            font-size: 36px;
+            font-weight: bold;
+            background-color: RGBA(0,0,0,.3);
+            color: #fff;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .arrow:hover {
+            background-color: RGBA(0,0,0,.7);
+        }
+        #box:hover .arrow {
+            display: block;
+        }
+        #buttons {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            z-index: 2;
+        }
+        #buttons span {
+            float: left;
+            margin-right: 5px;
+            cursor: pointer;
+            border: 1px solid #fff;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #333;
+        }
+        #buttons .on {
+            background: orangered;
+        }
+        #prev {
+            left: 20px;
+        }
+        #next {
+            right: 20px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+    <body>
+        <div id="control">
+            <button id="positive">正序</button>
+            <button id="inverted">逆序</button>
+            <button id="nocircle">不循环</button>
+            <button id="fast">3秒</button>
+            <button id="slow">6秒</button>
+        </div>
+        <div id="box">
+            <div id="list" style="left: -520px;">
+                <img src="img/img5.jpg" alt="img">
+                <img src="img/img1.png" alt="img">
+                <img src="img/img2.jpg" alt="img">
+                <img src="img/img3.jpg" alt="img">
+                <img src="img/img4.jpg" alt="img">
+                <img src="img/img5.jpg" alt="img">
+                <img src="img/img1.png" alt="img">
+            </div>
+            <div id="buttons">
+                <span index="1" class="on"></span>
+                <span index="2"></span>
+                <span index="3"></span>
+                <span index="4"></span>
+                <span index="5"></span>
+            </div>
+            <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+            <a href="javascript:;" id="next" class="arrow">&gt;</a>
+        </div>
+        <script src="util.js"></script>
+        <script src="js/task0002_3.js"></script>
+    </body>
+</html>
